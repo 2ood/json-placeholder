@@ -1,0 +1,19 @@
+{
+  "name": "jsonplaceholder",
+  "version": "1.0.0",
+  "description": "This is a dummy json api server built for frontend testing.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2ood/jsonplaceholder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2ood/jsonplaceholder/issues"
+  },
+  "homepage": "https://github.com/2ood/jsonplaceholder#readme"
+}
