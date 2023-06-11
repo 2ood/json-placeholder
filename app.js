@@ -10,3 +10,5 @@ app.use(BASEPATH_DUMMY_API+"/what-should-i-buy",router_what_should_i_buy);
 app.listen(port,() => {
     console.log(`Example app listening on ${port}`);
 });
+
+module.exports = app;
