@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/2ood/jsonplaceholder/issues"
   },
-  "homepage": "https://github.com/2ood/jsonplaceholder#readme"
+  "homepage": "https://github.com/2ood/jsonplaceholder#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
