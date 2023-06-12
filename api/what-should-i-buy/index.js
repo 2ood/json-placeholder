@@ -1,10 +1,15 @@
 const router = require('express').Router();
 
-const data = require("./sample-data.js");
+const controller = require("./controllers");
 
-router.get('/', (req, res) => {
-    res.header("Content-Type",'application/json');
-    res.send(JSON.stringify(data.sample_path_1.get));
-});
+//adding swagger api-docs
+const swaggerJsdoc = require("swagger-jsdoc");
+const swaggerUi = require("swagger-ui-express");
+
+const swagger_options = require("./swagger/swagger-options.js");
+const specs = swaggerJsdoc(swagger_options);
+
+router.use("/api-docs",swaggerUi.serve,swaggerUi.setup(specs));
+router.use("/",controller);
 
 module.exports = router;
