@@ -10,6 +10,10 @@ const swagger_options = require("./swagger/swagger-options.js");
 const specs = swaggerJsdoc(swagger_options);
 
 router.use("/api-docs",swaggerUi.serve,swaggerUi.setup(specs));
+router.use('/api-docs/*.css', (req, res, next) => {
+    res.set('Content-Type', 'text/css');
+    next();
+});
 router.use("/",controller);
 
 module.exports = router;
